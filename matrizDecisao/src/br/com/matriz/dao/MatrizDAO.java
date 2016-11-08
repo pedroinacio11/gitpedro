@@ -31,7 +31,7 @@ public class MatrizDAO {
 		comando.setString(1, m.getAtividade());
 		comando.setString(2, m.getTarefa());
 		comando.setDate(3, new java.sql.Date(m.getDtInclusao().getTime()));
-		comando.setDate(4, new java.sql.Date(m.getDtConlusao().getTime()));
+		comando.setDate(4, new java.sql.Date(m.getDtConclusao().getTime()));
 		comando.setDate(5, new java.sql.Date(m.getDtPrazo().getTime()));;
 		comando.setString(6, m.getCriticidade());
 		comando.setString(7, m.getTipo());
@@ -78,7 +78,7 @@ public class MatrizDAO {
 			
 			
 			gc.setTime(resultado.getDate("m.dtConclusao"));	
-			m.setDtConlusao(11, 11, 2016);
+			m.setDtConclusao(11, 11, 2016);
 			
 			gc.setTime(resultado.getDate("m.dtprazo"));	
 			m.setDtPrazo(11, 11, 2016);
@@ -122,7 +122,7 @@ public class MatrizDAO {
 		comando.setString(1, m.getAtividade());
 		comando.setString(2, m.getTarefa());
 		comando.setDate(3, new java.sql.Date(m.getDtInclusao().getTime()));
-		comando.setDate(4, new java.sql.Date(m.getDtConlusao().getTime()));
+		comando.setDate(4, new java.sql.Date(m.getDtConclusao().getTime()));
 		comando.setDate(5, new java.sql.Date(m.getDtPrazo().getTime()));;
 		comando.setString(6, m.getCriticidade());
 		comando.setString(7, m.getTipo());

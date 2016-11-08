@@ -12,7 +12,7 @@ import br.com.matriz.domain.Matriz;
 import br.com.matriz.domain.Produtos;
 import br.com.matriz.util.JSFUtil;
 
-@ManagedBean(name = "MBProduto")
+@ManagedBean(name = "MBMatriz")
 @ViewScoped
 public class MatrizBean {
 

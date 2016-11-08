@@ -10,7 +10,7 @@ public class Matriz {
 	private String atividade;
 	private String tarefa;
 	private Date dtInclusao;
-	private Date dtConlusao;
+	private Date dtConclusao;
 	private Date dtPrazo;
 	private String criticidade;
 	private String tipo;
@@ -52,10 +52,10 @@ public class Matriz {
 		Date d = cal.getTime();
 		this.dtInclusao = d;
 	}
-	public Date getDtConlusao() {
-		return dtConlusao;
+	public Date getDtConclusao() {
+		return dtConclusao;
 	}
-	public void setDtConlusao(int dia, int mes, int ano) {
+	public void setDtConclusao(int dia, int mes, int ano) {
 		
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.DAY_OF_MONTH,dia);
@@ -63,7 +63,7 @@ public class Matriz {
 		cal.set(Calendar.YEAR, ano);
 		
 		Date d = cal.getTime();
-		this.dtConlusao = d;
+		this.dtConclusao = d;
 	}
 	
 	public Date getDtPrazo() {

@@ -17,7 +17,7 @@ public class MatrizDAOTeste {
 		m.setAtividade("Erro ao cadastrar usuario no formulario de cadastro");
 		m.setTarefa("36712");
 		m.setDtInclusao(12,10,2016);
-		m.setDtConlusao(12,10,2016);
+		m.setDtConclusao(12,10,2016);
 		m.setDtPrazo(20,12,2016);
 		m.setCriticidade("ALTO");
 		m.setTipo("MELHORIA");
@@ -44,7 +44,7 @@ public class MatrizDAOTeste {
 			System.out.println("Atividade: " + m.getAtividade());
 			System.out.println("Tarefa: " + m.getTarefa());
 			System.out.println("Data de Inclusão: " + m.getDtInclusao());
-			System.out.println("Data de Conclusão: " + m.getDtConlusao());
+			System.out.println("Data de Conclusão: " + m.getDtConclusao());
 			System.out.println("Prazo: " + m.getDtPrazo());
 			System.out.println("Criticidade: " + m.getCriticidade());
 			System.out.println("Tipo: " + m.getTipo());
@@ -76,7 +76,7 @@ public class MatrizDAOTeste {
 		m.setAtividade("Erro");
 		m.setTarefa("36712");
 		m.setDtInclusao(12,10,2016);
-		m.setDtConlusao(12,10,2016);
+		m.setDtConclusao(12,10,2016);
 		m.setDtPrazo(20,12,2016);
 		m.setCriticidade("ALTO");
 		m.setTipo("MELHORIA");

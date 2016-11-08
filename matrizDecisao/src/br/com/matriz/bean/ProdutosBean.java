@@ -11,7 +11,7 @@ import br.com.matriz.dao.ProdutosDAO;
 import br.com.matriz.domain.Produtos;
 import br.com.matriz.util.JSFUtil;
 
-@ManagedBean(name = "MBFabricante")
+@ManagedBean(name = "MBProdutos")
 @ViewScoped
 public class ProdutosBean {
 	private Produtos produto;
