@@ -24,8 +24,7 @@
 					<h:outputText value="MATRIZ DE DECISÃO ONLINE" />
 				</f:facet>
 
-				<p:column headerText="ID" filterBy="false"
-					sortBy="#{item.codigo}">
+				<p:column headerText="ID" filterBy="false" sortBy="#{item.codigo}">
 					<h:outputText value="#{item.codigo}" />
 				</p:column>
 
@@ -39,24 +38,24 @@
 					<h:outputText value="#{item.tarefa}" />
 				</p:column>
 
-				<p:column headerText="Inclusão"
-					filterBy="#{item.dtInclusao}" sortBy="#{item.dtInclusao}">
-					<h:outputText value="#{item.dtInclusao}" >
-					<f:convertDateTime  />
+				<p:column headerText="Inclusão" filterBy="#{item.dtInclusao}"
+					sortBy="#{item.dtInclusao}">
+					<h:outputText value="#{item.dtInclusao}">
+						<f:convertDateTime />
 					</h:outputText>
 				</p:column>
 
-				<p:column headerText="Conclusão"
-					filterBy="#{item.dtConclusao}" sortBy="#{item.dtConclusao}">
-					<h:outputText value="#{item.dtConclusao}" >
-					<f:convertDateTime  />
+				<p:column headerText="Conclusão" filterBy="#{item.dtConclusao}"
+					sortBy="#{item.dtConclusao}">
+					<h:outputText value="#{item.dtConclusao}">
+						<f:convertDateTime />
 					</h:outputText>
 				</p:column>
 
 				<p:column headerText="Prazo" filterBy="#{item.dtPrazo}"
 					sortBy="#{item.dtPrazo}">
 					<h:outputText value="#{item.dtPrazo}">
-					<f:convertDateTime  />
+						<f:convertDateTime />
 					</h:outputText>
 				</p:column>
 
@@ -69,7 +68,7 @@
 					sortBy="#{item.tipo}">
 					<h:outputText value="#{item.tipo}" />
 				</p:column>
-		
+
 				<p:column headerText="Produto" filterBy="#{item.produtos.produto}"
 					sortBy="#{item.produtos.produto}}">
 					<h:outputText value="#{item.produtos.produto}}" />
@@ -108,38 +107,54 @@
 			appendTo="@(body)">
 
 			<h:form id="frmMatrizNovo">
+
+
+
+
 				<h:panelGrid id="pnlMatrizNovo" columns="2">
-					<p:outputLabel for="txtDescMatrizNovo" value="Descrição:" />
+					<p:outputLabel for="txtDescMatrizNovo" value="Descrição" />
 					<p:inputText id="txtDescMatrizNovo"
-						value="#{MBMatriz.produto.produtos}" maxlength="50" size="30"
-						required="true" requiredMessage="O Campo descricao é obrigatório" />
-					<!--
+						value="#{MBMatriz.produto.atividade}" maxlength="50" size="30"
+						required="true" requiredMessage="O Campo atividade é obrigatório" />
 
-					<p:outputLabel for="txtPrecoProdNovo" value="Preço" />
-					<p:inputText id="txtPrecoProdNovo"
-						value="#{MBProduto.produto.preco}" size="10" required="true"
-						requiredMessage="O campo preço é obrogatório"
-						converterMessage="Informe um valor válido para o campo preço."
-						validatorMessage="Informe um valor entre 0,00 e 9999,99 para o campo preço">
-						<f:convertNumber pattern="0.00" />
-						<f:validateDoubleRange minimum="0.00" maximum="9999.99" />
+					<p:outputLabel for="txtTarefaRedMatrizNovo" value="Redmine" />
+					<p:inputText id="txtTarefaRedMatrizNovo"
+						value="#{MBMatriz.produto.tarefa}" maxlength="50" size="30"
+						required="true" requiredMessage="O Campo tarefa é obrigatório" />
+
+<!-- Erro ao inserir a data, não está respeitando o mes dia e ano, tentei usar classe que está no util (CalendarView) sem sucesso -->
+
+					<p:outputLabel for="dtTarefaInclusaoNovo" value="Dt. Inclusão" />
+					<p:inputText id="dtTarefaInclusaoNovo"
+						value="#{MBMatriz.produto.dtInclusao}" required="true"
+						requiredMessage="O Campo Data de inclusão é obrigatório">
+						<f:convertDateTime pattern="MM/dd/yyyy" />
+					</p:inputText> 
+		
+					<p:outputLabel for="dtTarefaConclusaoNovo" value="Dt. Conlusão" />
+					<p:inputText id="dtTarefaConclusaoNovo"
+						value="#{MBMatriz.produto.dtConclusao}" required="false">
+						<f:convertDateTime pattern="MM/dd/yyyy" />
 					</p:inputText>
-					
-					
-					<p:outputLabel for="txtQtdProNovo" value="Quantidade:" />
-					<p:inputText id="txtQtdProNovo"
-						value="#{MBProduto.produto.quantidade}" size="10" required="true"
-						requiredMessage="O campo quantidade é obrigatório"
-						converterMessage="Informe um campo válido para o campo quantidade."
-						validatorMessage="Informe um valor entre 0 e 99 para o campo quantidade">
-						<f:validateLongRange minimum="0" maximum="99"/>
-						</p:inputText>
-						
-						
-						-->
 
+					<p:outputLabel for="dtPrazoNovo" value="Dt. Prazo" />
+					<p:inputText id="dtPrazoNovo" value="#{MBMatriz.produto.dtPrazo}"
+						required="false">
+						<f:convertDateTime pattern="dd/mm/yyyy" />
+					</p:inputText>
 
-					<p:outputLabel for="cbMatrizProdNovo" value="Matriz" />
+					<p:outputLabel for="txtCriticidadeNovo" value="Criticidade" />
+					<p:inputText id="txtCriticidadeNovo"
+						value="#{MBMatriz.produto.criticidade}" maxlength="50" size="30"
+						required="true"
+						requiredMessage="O Campo criticidade é obrigatório" />
+
+					<p:outputLabel for="txtTipoNovo" value="Tipo" />
+					<p:inputText id="txtTipoNovo" value="#{MBMatriz.produto.tipo}"
+						maxlength="50" size="30" required="true"
+						requiredMessage="O Campo tipo é obrigatório" />
+
+					<p:outputLabel for="cbMatrizProdNovo" value="Produtos" />
 					<p:selectOneMenu id="cbMatrizProdNovo"
 						value="#{MBMatriz.produto.produtos.codigo}" filter="true"
 						required="true" requiredMessage="O campo matriz é obrigatório.">
