@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 import br.com.matriz.domain.Matriz;
@@ -74,14 +75,14 @@ public class MatrizDAO {
 			
 	
 			gc.setTime(resultado.getDate("m.dtInclusao"));	
-			m.setDtInclusao(11, 11, 2016);
+			m.setDtInclusao(new Date());
 			
 			
 			gc.setTime(resultado.getDate("m.dtConclusao"));	
-			m.setDtConclusao(11, 11, 2016);
+			m.setDtConclusao(new Date());
 			
 			gc.setTime(resultado.getDate("m.dtprazo"));	
-			m.setDtPrazo(11, 11, 2016);
+			m.setDtPrazo(new Date());
 	
 			m.setCriticidade(resultado.getString("m.criticidade"));
 			m.setTipo(resultado.getString("m.tipo"));

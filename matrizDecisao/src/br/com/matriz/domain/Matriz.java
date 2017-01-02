@@ -1,6 +1,5 @@
 package br.com.matriz.domain;
 
-import java.util.Calendar;
 import java.util.Date;
 
 public class Matriz {
@@ -40,6 +39,8 @@ public class Matriz {
 	public void setTarefa(String tarefa) {
 		this.tarefa = tarefa;
 	}
+	
+	/*
 	public Date getDtInclusao() {
 		return dtInclusao;
 	}
@@ -51,10 +52,35 @@ public class Matriz {
 		
 		Date d = cal.getTime();
 		this.dtInclusao = d;
+	} */
+	
+	
+	
+	public Date getDtInclusao() {
+		return dtInclusao;
 	}
+	public void setDtInclusao(Date dtInclusao) {
+		this.dtInclusao = dtInclusao;
+	}
+	
+
 	public Date getDtConclusao() {
 		return dtConclusao;
 	}
+	public void setDtConclusao(Date dtConclusao) {
+		this.dtConclusao = dtConclusao;
+	}
+	public Date getDtPrazo() {
+		return dtPrazo;
+	}
+	public void setDtPrazo(Date dtPrazo) {
+		this.dtPrazo = dtPrazo;
+	}
+	/*
+	public Date getDtConclusao() {
+		return dtConclusao;
+	}
+	
 	public void setDtConclusao(int dia, int mes, int ano) {
 		
 		Calendar cal = Calendar.getInstance();
@@ -81,6 +107,7 @@ public class Matriz {
 		this.dtPrazo = d;
 	}
 
+*/
 	public String getCriticidade() {
 		return criticidade;
 	}

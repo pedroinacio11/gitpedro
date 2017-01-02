@@ -2,6 +2,8 @@ package br.com.matriz.test;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
+
 import org.junit.Test;
 
 import br.com.matriz.dao.MatrizDAO;
@@ -16,9 +18,9 @@ public class MatrizDAOTeste {
 		Matriz m = new Matriz();
 		m.setAtividade("Erro ao cadastrar usuario no formulario de cadastro");
 		m.setTarefa("36712");
-		m.setDtInclusao(12,10,2016);
-		m.setDtConclusao(12,10,2016);
-		m.setDtPrazo(20,12,2016);
+		m.setDtInclusao(new Date());
+		m.setDtConclusao(new Date());
+		m.setDtPrazo(new Date());
 		m.setCriticidade("ALTO");
 		m.setTipo("MELHORIA");
 		
@@ -75,9 +77,9 @@ public class MatrizDAOTeste {
 		m.setCodigo(6L);
 		m.setAtividade("Erro");
 		m.setTarefa("36712");
-		m.setDtInclusao(12,10,2016);
-		m.setDtConclusao(12,10,2016);
-		m.setDtPrazo(20,12,2016);
+		m.setDtInclusao(new Date());
+		m.setDtConclusao(new Date());
+		m.setDtPrazo(new Date());
 		m.setCriticidade("ALTO");
 		m.setTipo("MELHORIA");
 		

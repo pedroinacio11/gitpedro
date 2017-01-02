@@ -108,9 +108,6 @@
 
 			<h:form id="frmMatrizNovo">
 
-
-
-
 				<h:panelGrid id="pnlMatrizNovo" columns="2">
 					<p:outputLabel for="txtDescMatrizNovo" value="Descrição" />
 					<p:inputText id="txtDescMatrizNovo"
@@ -121,27 +118,16 @@
 					<p:inputText id="txtTarefaRedMatrizNovo"
 						value="#{MBMatriz.produto.tarefa}" maxlength="50" size="30"
 						required="true" requiredMessage="O Campo tarefa é obrigatório" />
-
-<!-- Erro ao inserir a data, não está respeitando o mes dia e ano, tentei usar classe que está no util (CalendarView) sem sucesso -->
-
+					
 					<p:outputLabel for="dtTarefaInclusaoNovo" value="Dt. Inclusão" />
-					<p:inputText id="dtTarefaInclusaoNovo"
-						value="#{MBMatriz.produto.dtInclusao}" required="true"
-						requiredMessage="O Campo Data de inclusão é obrigatório">
-						<f:convertDateTime pattern="MM/dd/yyyy" />
-					</p:inputText> 
-		
-					<p:outputLabel for="dtTarefaConclusaoNovo" value="Dt. Conlusão" />
-					<p:inputText id="dtTarefaConclusaoNovo"
-						value="#{MBMatriz.produto.dtConclusao}" required="false">
-						<f:convertDateTime pattern="MM/dd/yyyy" />
-					</p:inputText>
-
+					<p:calendar id="dtTarefaInclusaoNovo" value="#{MBMatriz.produto.dtInclusao}" pattern="MM/dd/yyyy"/>
+					
+					
+					<p:outputLabel for="dtTarefaConclusaoNovo" value="Dt. Conclusão" />
+					<p:calendar id="dtTarefaConclusaoNovo" value="#{MBMatriz.produto.dtConclusao}" pattern="MM/dd/yyyy"/>
+					
 					<p:outputLabel for="dtPrazoNovo" value="Dt. Prazo" />
-					<p:inputText id="dtPrazoNovo" value="#{MBMatriz.produto.dtPrazo}"
-						required="false">
-						<f:convertDateTime pattern="dd/mm/yyyy" />
-					</p:inputText>
+					<p:calendar id="dtPrazoNovo" value="#{MBMatriz.produto.dtPrazo}" pattern="MM/dd/yyyy"/>
 
 					<p:outputLabel for="txtCriticidadeNovo" value="Criticidade" />
 					<p:inputText id="txtCriticidadeNovo"
@@ -199,7 +185,6 @@
 
 					<p:outputLabel value="Quantidade:" />
 					<h:outputText value="#{MBProduto.produto.quantidade}" />
-
   -->
 
 					<!-- Mostrar os Produtos apos a exclusão -->
